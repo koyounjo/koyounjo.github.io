@@ -99,8 +99,6 @@ body {
     justify-content: space-around;
 }
 
-.main-menu li {}
-
 .main-menu a {
     font-weight: 700;
     font-size: 2rem;
@@ -109,9 +107,108 @@ body {
     text-shadow: 1px 1px 3px #CCC, 2px 2px 3px #CCC, 3px 3px 3px #CCC;
 }
 
+
+/* 메인 콘텐츠 */
+
 .content {
-    background-color: transparent;
-    min-height: 1000px;
+    background-color: skyblue;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* 애니메이션 */
+
+.text-effect {
+    /* background: yellow;
+    background-image: url("images/animation-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed; */
+    background: #333 url("images/animation-bg.jpg") no-repeat 50% 50% /cover fixed;
+    width: 1000px;
+    position: relative;
+}
+
+.text-frame {
+    font-weight: 700;
+    /* font-size: 60px; */
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: blue;
+    transform: translate(-50%, -50%);
+}
+
+.frame1 {
+    /* animation-name: textSize;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 5s;
+    animation-timing-function: ease-in-out; */
+    animation: textSize 3s forwards ease-in-out;
+    /* animation-play-state: paused; 자바스크립트 이용 동적 컨트롤 */
+}
+
+.frame2 {
+    opacity: 0;
+    animation: textSpin 3s forwards 3s ease-in-out;
+}
+
+@keyframes textSize {
+    0% {
+        font-size: 16px;
+    }
+    90% {
+        font-size: 60px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes textSpin {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(2turn);
+        font-size: 60px;
+    }
+}
+
+
+/* 새소식 */
+
+.news {
+    background: pink;
+    width: 400px;
+}
+
+
+/* 추천영상 */
+
+.media {
+    background: lime;
+    width: 600px;
+}
+
+
+/* 인기사이트 */
+
+.favorite {
+    display: block;
+    background: orange;
+    width: 1000px;
 }
 
 .footer {
