@@ -6,6 +6,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul {
@@ -198,7 +199,7 @@ body {
 
 .content {
     background-color: skyblue;
-    min-height: 500px;
+    min-height: 300px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -277,9 +278,35 @@ body {
 
 /* 새소식 */
 
+.news,
+.media,
+.favorite {
+    padding: 20px;
+}
+
 .news {
     background: pink;
     width: 400px;
+}
+
+.news-date {
+    display: block;
+    text-align: right;
+    margin: 1em 0;
+}
+
+.news-brief {
+    line-height: 1.6;
+    margin: 1em 0;
+}
+
+.new-thumbnail {
+    text-align: center
+}
+
+.new-thumbnail img {
+    max-width: 60%;
+    height: auto;
 }
 
 
